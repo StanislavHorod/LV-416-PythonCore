@@ -33,6 +33,6 @@ for word in range(len(text)):
 print("The count of 'better' is: " + str(better) + 
     ";\nThe count of 'newer' is: " + str(newer) +
     ";\nThe count of 'is' is: " + str(iss))
-print("\nEpic variant of the Python philosophy:\n"+text.upper())
-print("\n\n Variant with replace 'i' to '&':\n"+repla)
+print("\n\nEpic variant of the Python philosophy:\n\n"+text.upper())
+print("\n\n Variant with replace 'i' to '&':\n\n"+repla)
 

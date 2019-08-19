@@ -1,4 +1,5 @@
 def diskrimim(a,b,c):
+    """this func for finding discrumunant of the quadratic equation"""
     diskrim = b**2 - 4*a*b
     print("Diskriminant D = {}".format(diskrim))
     if diskrim > 0:

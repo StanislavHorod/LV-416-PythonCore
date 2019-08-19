@@ -1,3 +1,2 @@
-def reverser(st):
-    return " ".join(reversed(st.split())).strip()
-reverser('old young man today')
+def reverse(st):
+    return ' '.join(reversed(st.split()))

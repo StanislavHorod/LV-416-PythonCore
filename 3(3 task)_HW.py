@@ -5,4 +5,4 @@ while number>1:
     cash *=number
     number-=1
 final_number = str(cash)
-print("The factorial of the "+start_number+ " is: "+ final_number)
+print("The factorial of the "+start_number+ " is: '"+ final_number)

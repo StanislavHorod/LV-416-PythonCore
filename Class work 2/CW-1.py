@@ -31,5 +31,5 @@ while True:
          print("Thanks for using our prognoz")
          break
     else:
-         print("Wrong input!")
+         print("Wrong input! Try again")
          continue

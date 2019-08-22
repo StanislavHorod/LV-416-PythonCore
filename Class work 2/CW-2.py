@@ -8,4 +8,4 @@ while i!=0:
         print("Congrat you right!")
         i = 0
     else:
-        uzver = int(input("Try again\nWrite number: "))
+        uzver = int(input("Try again\nPlease write number: "))

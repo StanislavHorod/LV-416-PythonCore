@@ -21,6 +21,8 @@ def choise(chose):
         +"\n\n")
     elif chose == 3:
         return 1
+    else:
+        print("Wrong input, try again")
 
 i=0
 while i!=1:

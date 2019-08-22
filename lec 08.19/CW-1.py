@@ -22,7 +22,14 @@ c= w.get_temperature('celsius')  # {'temp_max': 10.5, 'temp': 9.7, 'temp_min': 9
 observation_list = owm.weather_around_coords(-22.57, -43.12)
 
 print("Current wind: {}\nThe humidity is: {}\nThe temperature is: {}".format(a['speed'], b, c['temp']))
-more_info = int(input("For more details write 1"))
-if more_info ==1:
-    print("Current wind: {}\nThe deg is: {}\nThe temperature is: {}".format(a['speed'], b['deg'], c['temp'])+
-    "\nThe maximum temperatura is: {{}")
+more_info = int(input("For more details write 1 \nFor exit write 2 "))
+while True:
+    if more_info ==1:
+        print("\n\nDetailed prognoz\n\nCurrent wind: {}\nThe deg is: {}\nThe temperature is: {}".format(a['speed'], a['deg'], c['temp']) +
+              "\nThe maximum temperatura is: {}\nThe minimal temperatura is:{}".format(c['temp_max'], c['temp_min']))
+    elif more_info == 2:
+         print("Thanks for using our prognoz")
+         break
+    else:
+         print("Wrong input!")
+         continue

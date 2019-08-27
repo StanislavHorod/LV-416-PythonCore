@@ -1,17 +1,16 @@
 import pygame
+import objects
 
-from game_object import GameObject
 
-
-class Ball(GameObject):
-    def __init__(self, x, y, r, color, speed):
-        GameObject.__init__(self, x - r, y - r, r * 2, r * 2, speed)
-        self.radius = r
-        self.diameter = r * 2
-        self.color = color
+class Stryker_Ball(objects.Objects):
+    def __init__(self, center_x, center_y, ball_radius, color_ball, ball_speed):
+        objects.Objects.__init__(self, center_x - ball_radius, center_y - ball_radius, ball_radius * 2, ball_radius * 2, ball_speed)
+        self.ball_radius = ball_radius
+        self.diameter = ball_radius * 2
+        self.color_ball = color_ball
 
     def draw(self, surface):
-        r = pygame.draw.circle(surface, self.color, self.center, self.radius)
+        ball_radius = pygame.draw.circle(surface, self.color_ball, self.center_point, self.ball_radius)
 
     def update(self):
         super().update()

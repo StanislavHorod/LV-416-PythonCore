@@ -1,8 +1,8 @@
-import pygame
+import pygame 
 # import tkinter
 
 # root = Tk()
-#frames = [PhotoImage(file='w200.gif',format = 'gif -index %i' %(i)) for i in range(100)]
+frames = [PhotoImage(file='w200.gif',format = 'gif -index %i' %(i)) for i in range(100)]
 def update(ind):
 
     frame = frames[ind]

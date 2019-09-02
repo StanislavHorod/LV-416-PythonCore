@@ -7,7 +7,10 @@ def absolut(number):
         return 0
     else:
         return absolut(number)
-
-numb = int(input("Write the number: "))
+try:
+    numb = int(input("Write the number: "))
+except ValueError:
+    print("write number")
+    
 ress = str(absolut(numb))
 print("Absolut number of {} is: ".format(numb) + ress)

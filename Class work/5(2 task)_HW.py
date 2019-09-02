@@ -1,11 +1,14 @@
-for j in range(100):
-    if j%2!=0:
-        print(str(j)+"\n")
-        continue
-    j+=1
+try:
+    for j in range(100):
+        if j%2!=0:
+            print(str(j)+"\n")
+            continue
+        j+=1
 
-for j in range(100):
-    if j%2!=0:
-        print(str(j)+"\n")
+    for j in range(100):
+        if j%2!=0:
+            print(str(j)+"\n")
             
-    j+=1
+        j+=1
+except:
+    print("this text will never be print")

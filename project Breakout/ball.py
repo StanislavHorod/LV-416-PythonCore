@@ -1,6 +1,7 @@
 import pygame
 import objects
 
+"""construkt of ball"""
 
 class Stryker_Ball(objects.Objects):
     def __init__(self, center_x, center_y, ball_radius, color_ball, ball_speed):

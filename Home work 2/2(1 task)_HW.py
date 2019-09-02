@@ -19,20 +19,23 @@ words = text.split()
 better = 0
 newer = 0
 iss = 0
-for word in words:
-    if word == "better":
-        better += 1
-    elif word == "newer":
-        newer += 1
-    elif word == "is":
-        iss += 1
+try:
+    for word in words:
+        if word == "better":
+            better += 1
+        elif word == "newer":
+            newer += 1
+        elif word == "is":
+            iss += 1
 
-for word in range(len(text)):
-    repla = text.replace("i", "&")
+    for word in range(len(text)):
+        repla = text.replace("i", "&")
 
-print("The count of 'better' is: " + str(better) + 
-    ";\nThe count of 'newer' is: " + str(newer) +
-    ";\nThe count of 'is' is: " + str(iss))
-print("\n\nEpic variant of the Python philosophy:\n\n"+text.upper())
-print("\n\n Variant with replace 'i' to '&':\n\n"+repla)
+    print("The count of 'better' is: " + str(better) + 
+        ";\nThe count of 'newer' is: " + str(newer) +
+        ";\nThe count of 'is' is: " + str(iss))
+    print("\n\nEpic variant of the Python philosophy:\n\n"+text.upper())
+    print("\n\n Variant with replace 'i' to '&':\n\n"+repla)
+except IndexError:
+    print("Out of range")
 

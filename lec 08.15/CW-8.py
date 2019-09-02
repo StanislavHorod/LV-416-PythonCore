@@ -1,3 +1,4 @@
+
 def diskrimim(a,b,c):
     """this func for finding discrumunant of the quadratic equation"""
     diskrim = b**2 - 4*a*b
@@ -12,7 +13,12 @@ def diskrimim(a,b,c):
     else:
         print("There is no resaults")
 
-a = float(input("Write coeficients for equation: (ax^2 + bx + c = 0):\na= "))
-b = float(input("b= "))
-c = float(input("c= "))
-diskrimim(a=a, b=b, c=c)
+try:
+    a = float(input("Write coeficients for equation: (ax^2 + bx + c = 0):\na= "))
+    b = float(input("b= "))
+    c = float(input("c= "))
+    diskrimim(a=a, b=b, c=c)
+except ZeroDivisionError:
+    print("warning, there is division on 0!")
+except ValueError:
+    print("write numbers, not letters")

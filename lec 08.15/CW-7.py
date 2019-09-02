@@ -10,8 +10,11 @@ def fibonachu(number):
         FibArray.append(temp_fib) 
         return temp_fib 
             
- 
-counter = int(input("Write for what number fibo we must work: "))
+try: 
+    counter = int(input("Write for what number fibo we must work: "))
+except ValueError:
+    print("write numbers not letter")
+    
 for i in range(counter+2):
     print(fibonachu(i))
 

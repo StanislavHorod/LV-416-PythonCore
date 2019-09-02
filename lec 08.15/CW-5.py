@@ -5,7 +5,11 @@ def summa_of_numbers(number):
         result += number % 10
         number //= 10
     return result
+    
+try:
+    test_number = int(input("Write the number: "))
+except ValueError:
+    print("write number, not letter")
 
-test_number = int(input("Write the number: "))
 result_summa = summa_of_numbers(test_number)
 print("Summa of the numbers {} is {}".format(test_number, result_summa))

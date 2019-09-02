@@ -1,6 +1,10 @@
 import pyowm
-
-locate = input("Write your location: ")
+try:
+    locate = input("Write your location: ")
+    if locate == " ":
+         raise Exception("The location can be empty!")
+except Exception as exi:
+     print(exi)
 owm = pyowm.OWM('ef2206ff5da67de63306d0b143e20872')  # You MUST provide a valid API key
 
 # Have a pro subscription? Then use:
@@ -23,13 +27,18 @@ observation_list = owm.weather_around_coords(-22.57, -43.12)
 
 print("Current wind: {}\nThe humidity is: {}\nThe temperature is: {}".format(a['speed'], b, c['temp']))
 more_info = int(input("For more details write 1 \nFor exit write 2 "))
-while True:
-    if more_info ==1:
-        print("\n\nDetailed prognoz\n\nCurrent wind: {}\nThe deg is: {}\nThe temperature is: {}".format(a['speed'], a['deg'], c['temp']) +
-              "\nThe maximum temperatura is: {}\nThe minimal temperatura is:{}".format(c['temp_max'], c['temp_min']))
-    elif more_info == 2:
-         print("Thanks for using our prognoz")
-         break
-    else:
-         print("Wrong input! Try again")
-         continue
+try:
+    while True:
+        if more_info ==1:
+            print("\n\nDetailed prognoz\n\nCurrent wind: {}\nThe deg is: {}\nThe temperature is: {}".format(a['speed'], a['deg'], c['temp']) +
+                  "\nThe maximum temperatura is: {}\nThe minimal temperatura is:{}".format(c['temp_max'], c['temp_min']))
+        elif more_info == 2:
+             print("Thanks for using our prognoz")
+             break
+        else:
+             raise Exception("Wrong input number!")
+             continue
+except ValueError:
+     print("Write the numbers, not letters!")
+except Exception as exi2:
+     print(exi2)

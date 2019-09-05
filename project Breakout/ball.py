@@ -10,8 +10,8 @@ class Stryker_Ball(objects.Objects):
         self.diameter = ball_radius * 2
         self.color_ball = color_ball
 
-    def draw(self, surface):
-        ball_radius = pygame.draw.circle(surface, self.color_ball, self.center_point, self.ball_radius)
+    def draw(self, field):
+        self.ball_radius = pygame.draw.circle(field, self.color_ball, self.center_point, self.ball_radius)
 
     def update(self):
         super().update()

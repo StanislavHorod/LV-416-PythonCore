@@ -1,10 +1,10 @@
-import pygame
+import pygame 
 
 
 class Objects:
     """giving to objects coordinats, speed (for basik is 0,0), bounds of field"""
     def __init__(self, x, y, widgh, height, speed=(0,0)):
-        """initialization of the different objects"""
+        
         self.bounds = pygame.Rect(x, y, widgh, height)
         self.speed = speed
 
